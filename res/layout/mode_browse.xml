@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:ignore="Overdraw" >
+    
+   <Spinner
+        android:id="@+id/dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:clipChildren="true"
+        android:ellipsize="end" />
+
+    <View
+        android:id="@+id/div_top"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/dropdown"
+        android:background="@color/div_blue" />
+    
+    <LinearLayout android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true" >
+        
+        <ImageButton android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+        	android:minWidth="48dp"
+            android:layout_height="wrap_content"
+        	android:minHeight="48dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back"
+            android:background="@drawable/button_background" />
+        
+    </LinearLayout>
+	
+    <View
+        android:id="@+id/div_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/bottom_bar"
+        android:background="@color/div_blue" />
+	
+    <ListView
+        android:id="@+id/file_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_bottom"
+        android:layout_below="@id/div_top"
+        android:scrollingCache="false" />
+    
+</RelativeLayout>

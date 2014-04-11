@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:ignore="Overdraw" >
+
+    <Spinner
+        android:id="@+id/dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:clipChildren="true"
+        android:ellipsize="end" />
+
+    <View
+        android:id="@+id/div_top"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/dropdown"
+        android:background="@color/div_blue" />
+
+    <View
+        android:id="@+id/div_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:background="@color/div_blue" />
+
+    <ListView
+        android:id="@+id/text_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_bottom"
+        android:layout_below="@id/div_top"
+        android:background="@android:color/white"
+        android:padding="6dp"
+        android:scrollingCache="false" />
+
+</RelativeLayout>
