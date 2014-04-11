@@ -1,4 +1,4 @@
 SmallText
 =========
 
-Small Ttxt viewer for android using Sony SmallApps
+Small Text viewer for android using Sony SmallApps
